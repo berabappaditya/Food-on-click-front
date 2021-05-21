@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+.exact-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ofc-txt{
+  font-family: 'Open Sans',
+  sans-serif;
+  font-weight: bold;
+}
+
+/*Styling for Navbar */
+.navbarmain {
+  margin: 0px;
+ 
+}
+
+.rend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+
+}
+
+.carticon {
+  width: 100%;
+ 
+}
+
+.rendich {
+   align-items: center;
+   position: Absolute;
+   top:10px;
+   right: 20px;
+
+}
+
+i,
+p {
+  color: rgb(24, 14, 1);
+}
+ .nav-container {
+  background-color: #ffe6c7;
+}
+/*Styling for Navbar  Ends here*/
+/* main page styling and cards */
+.card-img{
+   height:80%;
+   width: 80%;
+   margin: 5px;
+   object-fit:contain;
+   
+}
+.sqr-card{
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  border-radius: 7px;
+  transition: 1s ease;
+
+}
+.sqr-card:hover{
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+   -webkit-transform: scale(1.001);
+   -ms-transform: scale(1.001);
+   transform: scale(1.001);
+
+}
+/* main page styling and cards end here*/
+.sec-head{
+  font-family: 'Open Sans',
+  sans-serif;
+  background-color: rgb(228, 121, 102);
+  color: rgb(255, 255, 255)
+}
+/* vartical card */
+.varti-card{
+  width:100%;
+  height: 250px;
+  margin-top:20px;
+  padding:5px;
+}
+.varti-card-sec{
+  
+}
+.left-card{
+  background-color:rgb(219, 219, 219)
+}
+
+.varti-card-img{
+   height:100%;
+   width: 100%;
+   object-fit:cover;
+}
+
+@media (max-width: 440px){
+  .ver-card-con {
+    width: 100%;
+  }
+  .ofc-txt{
+    font-size:80%;
+  }
+  p{
+    font-size:80%;
+  }
+  .varti-card {
+   height: 220px;
+  }
+
+}
+/* vartical card end */
