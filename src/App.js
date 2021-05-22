@@ -14,13 +14,17 @@ function App() {
   const [cartItems, updateCartItems] = useState([]);
   const [cartItemCount, updateCartItemCount] = useState(0);
   async function fetchProducts() {
-    const itemsData = await axios.get("http://localhost:8080/product/getData");
+    const itemsData = await axios.get(
+      "https://still-refuge-20141.herokuapp.com/product/getData"
+    );
     const itemsArray = itemsData.data.result;
     getProducts(itemsArray);
   }
 
   async function fetchCartItems() {
-    const cartDataItem = await axios.get(`http://localhost:8080/cart/getData`);
+    const cartDataItem = await axios.get(
+      `https://still-refuge-20141.herokuapp.com/cart/getData`
+    );
     const cartApiDataArray = cartDataItem.data.result;
     console.log("This is cart API data!!!!!!!!", cartApiDataArray);
     updateCartItems(cartApiDataArray);

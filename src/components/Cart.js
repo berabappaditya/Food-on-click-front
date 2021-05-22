@@ -6,12 +6,15 @@ function Cart({ cartItems, fetchCartItems, cartItemCount }) {
   // const [totalPrice, updatetoTalPrice] = useState(0);
 
   async function deleteItem(item) {
-    await axios.delete("http://localhost:8080/cart/deleteData", {
-      data: {
-        //specially for delete function we have to add data object
-        _id: item._id,
-      },
-    });
+    await axios.delete(
+      "https://still-refuge-20141.herokuapp.com/cart/deleteData",
+      {
+        data: {
+          //specially for delete function we have to add data object
+          _id: item._id,
+        },
+      }
+    );
     fetchCartItems();
   }
 
@@ -28,7 +31,9 @@ function Cart({ cartItems, fetchCartItems, cartItemCount }) {
   // }
 
   async function clearCart() {
-    await axios.delete("http://localhost:8080/cart/deleteAll");
+    await axios.delete(
+      "https://still-refuge-20141.herokuapp.com/cart/deleteAll"
+    );
     fetchCartItems();
   }
 

@@ -8,12 +8,15 @@ function Burger({ products, fetchCartItems }) {
   console.log("This is burger", burgerArray);
 
   async function addItem(item) {
-    const sendTask = await axios.post(`http://localhost:8080/cart/postData`, {
-      name: item.name,
-      image: item.image,
-      price: item.price,
-      description: item.description,
-    });
+    const sendTask = await axios.post(
+      `https://still-refuge-20141.herokuapp.com/cart/postData`,
+      {
+        name: item.name,
+        image: item.image,
+        price: item.price,
+        description: item.description,
+      }
+    );
 
     console.log(sendTask);
     fetchCartItems();
